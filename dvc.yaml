@@ -1,0 +1,19 @@
+stages:
+  index:
+    cmd: python -m runbook_rag.cli index
+    deps:
+      - knowledge_base
+      - src/runbook_rag/chunking.py
+      - src/runbook_rag/retrieval.py
+    outs:
+      - artifacts/rag_index.joblib
+      - artifacts/rag_index.json
+  evaluate:
+    cmd: python -m runbook_rag.cli evaluate --min-recall 0.8
+    deps:
+      - artifacts/rag_index.joblib
+      - data/evaluation.jsonl
+      - src/runbook_rag/evaluation.py
+    metrics:
+      - reports/metrics.json:
+          cache: false

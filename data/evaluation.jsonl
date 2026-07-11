@@ -1,0 +1,10 @@
+{"question":"The API p95 latency jumped after today's deployment. What should I check and when can I close the incident?","service":"api","relevant_documents":["api_latency"]}
+{"question":"Requests wait for database connections and the pool rejects new work. How do I triage safely?","service":"database","relevant_documents":["database_connections"]}
+{"question":"A pod keeps restarting with CrashLoopBackOff after an image rollout. What evidence should I collect?","service":"kubernetes","relevant_documents":["kubernetes_crashloop"]}
+{"question":"Kubernetes reports DiskPressure and starts evicting pods. What is the safe response?","service":"kubernetes","relevant_documents":["disk_pressure"]}
+{"question":"Our public TLS certificate expires soon and automatic renewal failed. What do we verify?","service":"edge","relevant_documents":["certificate_expiry"]}
+{"question":"How do I verify recovery after rolling back a latency regression?","service":"api","relevant_documents":["api_latency"]}
+{"question":"Can I kill idle database sessions when the connection pool is exhausted?","service":"database","relevant_documents":["database_connections"]}
+{"question":"Should I delete every crashing pod to fix the restart loop?","service":"kubernetes","relevant_documents":["kubernetes_crashloop"]}
+{"question":"The node filesystem and inode usage are high. What should be inspected before cleanup?","service":"kubernetes","relevant_documents":["disk_pressure"]}
+{"question":"Where should an emergency certificate private key be stored?","service":"edge","relevant_documents":["certificate_expiry"]}
